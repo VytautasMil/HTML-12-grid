@@ -1,4 +1,14 @@
-.grid1 {
+input {
+    font-size: 16px;
+    padding: 0.5em 1em;
+    width: 100%;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .grid1 {
     display: grid;
     /* kiek stulpeliu mes turesim */
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -12,15 +22,64 @@
   
   .item1 {
     grid-column: span 3;
+    grid-row: span 2;
   }
   .item2 {
     grid-column: span 3;
   }
   .item3 {
-    grid-column: 2 / span 5;
+    grid-column: span 3;
   }
   .item4,
   .item5,
   .item6 {
     grid-column: span 2;
+  }
+  
+  /* Form =============== */
+  
+  .container.form {
+    background-color: rgb(154, 154, 154);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+  }
+  
+  .first-name {
+    grid-area: firstName;
+  }
+  .last-name {
+    grid-area: lastName;
+  }
+  .email {
+    grid-area: email;
+  }
+  .subject {
+    grid-area: subject;
+  }
+  .message {
+    grid-area: message;
+  }
+  .btn {
+    grid-area: btn;
+  }
+  
+  .form-grid {
+    max-width: 500px;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      'firstName lastName lastName'
+      'email email email'
+      'subject subject subject'
+      'message message message'
+      '. . btn';
+  }
+  
+  .message textarea {
+    width: 100%;
+    min-height: 100px;
+    resize: vertical;
   }

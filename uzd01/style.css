@@ -1,0 +1,24 @@
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background-color: rgb(125, 188, 163);
+    max-width: 50%;
+    align-items: center;
+}
+.grid-item {
+padding: 20px;
+
+}
+.item1 {
+    grid-column: span 2;
+}
+.item5 {
+    grid-column: span 2;
+}
+.item6 {
+    grid-column: span 2;
+}
+.email {
+    min-width: 100%;
+}
