@@ -1,4 +1,26 @@
-.grid-item {
+.grid1 {
+    display: grid;
+    /* kiek stulpeliu mes turesim */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .grid-item {
     background-color: #dbdbdb;
     padding: 20px;
-}
+  }
+  
+  .item1 {
+    grid-column: span 3;
+  }
+  .item2 {
+    grid-column: span 3;
+  }
+  .item3 {
+    grid-column: 2 / span 5;
+  }
+  .item4,
+  .item5,
+  .item6 {
+    grid-column: span 2;
+  }
